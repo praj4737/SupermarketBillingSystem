@@ -23,6 +23,8 @@ Partial Class AddUser
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Panel1 = New Panel()
+        ComboBox4 = New ComboBox()
+        Label13 = New Label()
         Button5 = New Button()
         Button4 = New Button()
         Button2 = New Button()
@@ -42,7 +44,7 @@ Partial Class AddUser
         DateTimePicker1 = New DateTimePicker()
         Label12 = New Label()
         Label3 = New Label()
-        city = New TextBox()
+        zipcode = New TextBox()
         Label9 = New Label()
         Label4 = New Label()
         Label5 = New Label()
@@ -58,8 +60,6 @@ Partial Class AddUser
         DataGridView1 = New DataGridView()
         searchBox = New TextBox()
         Label1 = New Label()
-        ComboBox4 = New ComboBox()
-        Label13 = New Label()
         Panel1.SuspendLayout()
         gender.SuspendLayout()
         Panel2.SuspendLayout()
@@ -89,7 +89,7 @@ Partial Class AddUser
         Panel1.Controls.Add(DateTimePicker1)
         Panel1.Controls.Add(Label12)
         Panel1.Controls.Add(Label3)
-        Panel1.Controls.Add(city)
+        Panel1.Controls.Add(zipcode)
         Panel1.Controls.Add(Label9)
         Panel1.Controls.Add(Label4)
         Panel1.Controls.Add(Label5)
@@ -106,6 +106,26 @@ Partial Class AddUser
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(488, 958)
         Panel1.TabIndex = 0
+        ' 
+        ' ComboBox4
+        ' 
+        ComboBox4.FormattingEnabled = True
+        ComboBox4.Items.AddRange(New Object() {"Select State", "Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar", "Chhattisgarh", "Goa", "Gujarat", "Haryana", "Himachal Pradesh", "Jammu and Kashmir", "Jharkhand", "Karnataka", "Kerala", "Madhya Pradesh", "Maharashtra", "Manipur", "Meghalaya", "Mizoram", "Nagaland", "Odisha", "Punjab", "Rajasthan", "Sikkim", "Tamil Nadu", "Telangana", "Tripura", "Uttar Pradesh", "Uttarakhand", "West Bengal"})
+        ComboBox4.Location = New Point(211, 665)
+        ComboBox4.Name = "ComboBox4"
+        ComboBox4.Size = New Size(236, 28)
+        ComboBox4.TabIndex = 66
+        ' 
+        ' Label13
+        ' 
+        Label13.AutoSize = True
+        Label13.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        Label13.ForeColor = Color.Black
+        Label13.Location = New Point(52, 661)
+        Label13.Name = "Label13"
+        Label13.Size = New Size(56, 28)
+        Label13.TabIndex = 65
+        Label13.Text = "State"
         ' 
         ' Button5
         ' 
@@ -297,12 +317,12 @@ Partial Class AddUser
         Label3.TabIndex = 31
         Label3.Text = "Dob"
         ' 
-        ' city
+        ' zipcode
         ' 
-        city.Location = New Point(210, 516)
-        city.Name = "city"
-        city.Size = New Size(236, 27)
-        city.TabIndex = 44
+        zipcode.Location = New Point(210, 516)
+        zipcode.Name = "zipcode"
+        zipcode.Size = New Size(236, 27)
+        zipcode.TabIndex = 44
         ' 
         ' Label9
         ' 
@@ -450,26 +470,6 @@ Partial Class AddUser
         Label1.TabIndex = 65
         Label1.Text = "Search"
         ' 
-        ' ComboBox4
-        ' 
-        ComboBox4.FormattingEnabled = True
-        ComboBox4.Items.AddRange(New Object() {"Select State", "Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar", "Chhattisgarh", "Goa", "Gujarat", "Haryana", "Himachal Pradesh", "Jammu and Kashmir", "Jharkhand", "Karnataka", "Kerala", "Madhya Pradesh", "Maharashtra", "Manipur", "Meghalaya", "Mizoram", "Nagaland", "Odisha", "Punjab", "Rajasthan", "Sikkim", "Tamil Nadu", "Telangana", "Tripura", "Uttar Pradesh", "Uttarakhand", "West Bengal"})
-        ComboBox4.Location = New Point(211, 665)
-        ComboBox4.Name = "ComboBox4"
-        ComboBox4.Size = New Size(236, 28)
-        ComboBox4.TabIndex = 66
-        ' 
-        ' Label13
-        ' 
-        Label13.AutoSize = True
-        Label13.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
-        Label13.ForeColor = Color.Black
-        Label13.Location = New Point(52, 661)
-        Label13.Name = "Label13"
-        Label13.Size = New Size(56, 28)
-        Label13.TabIndex = 65
-        Label13.Text = "State"
-        ' 
         ' AddUser
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
@@ -498,7 +498,7 @@ Partial Class AddUser
     Friend WithEvents Label12 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents Label9 As Label
-    Friend WithEvents city As TextBox
+    Friend WithEvents zipcode As TextBox
     Friend WithEvents Label8 As Label
     Friend WithEvents addL3 As TextBox
     Friend WithEvents addL2 As TextBox

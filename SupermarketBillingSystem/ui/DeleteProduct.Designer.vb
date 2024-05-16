@@ -25,6 +25,7 @@ Partial Class DeleteProduct
         Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As DataGridViewCellStyle = New DataGridViewCellStyle()
         GroupBox2 = New GroupBox()
         Button3 = New Button()
         Button2 = New Button()
@@ -38,7 +39,7 @@ Partial Class DeleteProduct
         ' 
         ' GroupBox2
         ' 
-        GroupBox2.BackColor = Color.LightGray
+        GroupBox2.BackColor = Color.Transparent
         GroupBox2.Controls.Add(Button3)
         GroupBox2.Controls.Add(Button2)
         GroupBox2.Controls.Add(search)
@@ -67,7 +68,7 @@ Partial Class DeleteProduct
         ' 
         Button2.BackColor = Color.Navy
         Button2.ForeColor = Color.White
-        Button2.Location = New Point(395, 60)
+        Button2.Location = New Point(402, 60)
         Button2.Name = "Button2"
         Button2.Size = New Size(181, 29)
         Button2.TabIndex = 6
@@ -97,15 +98,18 @@ Partial Class DeleteProduct
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Font = New Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
+        Label2.BackColor = SystemColors.ActiveCaption
+        Label2.Font = New Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Label2.ForeColor = Color.Black
         Label2.Location = New Point(6, 23)
         Label2.Name = "Label2"
-        Label2.Size = New Size(161, 31)
+        Label2.Size = New Size(164, 31)
         Label2.TabIndex = 3
         Label2.Text = "Product Name"
         ' 
         ' productsViewTable
         ' 
+        productsViewTable.BackgroundColor = Color.White
         DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle1.BackColor = SystemColors.ButtonHighlight
         DataGridViewCellStyle1.Font = New Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point)
@@ -126,7 +130,7 @@ Partial Class DeleteProduct
         productsViewTable.Location = New Point(0, 108)
         productsViewTable.Name = "productsViewTable"
         DataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = SystemColors.Control
+        DataGridViewCellStyle3.BackColor = Color.White
         DataGridViewCellStyle3.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
         DataGridViewCellStyle3.ForeColor = Color.Black
         DataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight
@@ -134,6 +138,10 @@ Partial Class DeleteProduct
         DataGridViewCellStyle3.WrapMode = DataGridViewTriState.True
         productsViewTable.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         productsViewTable.RowHeadersWidth = 51
+        DataGridViewCellStyle4.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point)
+        DataGridViewCellStyle4.ForeColor = Color.Black
+        DataGridViewCellStyle4.SelectionBackColor = Color.DodgerBlue
+        productsViewTable.RowsDefaultCellStyle = DataGridViewCellStyle4
         productsViewTable.RowTemplate.Height = 29
         productsViewTable.Size = New Size(1264, 617)
         productsViewTable.TabIndex = 2
@@ -142,7 +150,7 @@ Partial Class DeleteProduct
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        BackColor = Color.White
+        BackColor = SystemColors.ActiveCaption
         ClientSize = New Size(1278, 737)
         Controls.Add(productsViewTable)
         Controls.Add(GroupBox2)

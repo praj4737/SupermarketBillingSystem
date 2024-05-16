@@ -22,6 +22,9 @@
     <Compile Update="ui\Bill.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="ui\SearchProduct.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="ui\SearchProducts.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -37,6 +40,9 @@
     <Compile Update="ui\SalesHomePage.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="ui\UpdateProduct.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="ui\viewProducts.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -44,6 +50,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="ui\ViewSales.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ui\ViewUsers.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

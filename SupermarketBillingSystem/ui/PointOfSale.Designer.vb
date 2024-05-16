@@ -41,12 +41,13 @@ Partial Class PointOfSale
         Button6 = New Button()
         customerdetail = New DataGridView()
         TextBox2 = New TextBox()
-        TextBox1 = New TextBox()
+        customerNameTxtbox = New TextBox()
         Label4 = New Label()
         Label3 = New Label()
         BillList = New DataGridView()
         total = New Label()
         totalValue = New TextBox()
+        Button3 = New Button()
         GroupBox2.SuspendLayout()
         CType(productlist, ComponentModel.ISupportInitialize).BeginInit()
         GroupBox5.SuspendLayout()
@@ -208,7 +209,7 @@ Partial Class PointOfSale
         Panel1.Controls.Add(Button6)
         Panel1.Controls.Add(customerdetail)
         Panel1.Controls.Add(TextBox2)
-        Panel1.Controls.Add(TextBox1)
+        Panel1.Controls.Add(customerNameTxtbox)
         Panel1.Controls.Add(Label4)
         Panel1.Controls.Add(Label3)
         Panel1.Location = New Point(12, 12)
@@ -246,13 +247,13 @@ Partial Class PointOfSale
         TextBox2.Size = New Size(222, 27)
         TextBox2.TabIndex = 15
         ' 
-        ' TextBox1
+        ' customerNameTxtbox
         ' 
-        TextBox1.Location = New Point(142, 56)
-        TextBox1.Multiline = True
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(222, 34)
-        TextBox1.TabIndex = 13
+        customerNameTxtbox.Location = New Point(142, 56)
+        customerNameTxtbox.Multiline = True
+        customerNameTxtbox.Name = "customerNameTxtbox"
+        customerNameTxtbox.Size = New Size(222, 34)
+        customerNameTxtbox.TabIndex = 13
         ' 
         ' Label4
         ' 
@@ -305,12 +306,25 @@ Partial Class PointOfSale
         totalValue.Size = New Size(133, 51)
         totalValue.TabIndex = 15
         ' 
+        ' Button3
+        ' 
+        Button3.BackColor = Color.Navy
+        Button3.Font = New Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point)
+        Button3.ForeColor = Color.White
+        Button3.Location = New Point(1186, 608)
+        Button3.Name = "Button3"
+        Button3.Size = New Size(179, 44)
+        Button3.TabIndex = 16
+        Button3.Text = "Calculate"
+        Button3.UseVisualStyleBackColor = False
+        ' 
         ' PointOfSale
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
         ClientSize = New Size(1377, 923)
+        Controls.Add(Button3)
         Controls.Add(totalValue)
         Controls.Add(total)
         Controls.Add(BillList)
@@ -342,7 +356,7 @@ Partial Class PointOfSale
     Friend WithEvents Button5 As Button
     Friend WithEvents Label7 As Label
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents customerNameTxtbox As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents TextBox2 As TextBox
@@ -357,4 +371,5 @@ Partial Class PointOfSale
     Friend WithEvents totalValue As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents paymentType As ComboBox
+    Friend WithEvents Button3 As Button
 End Class

@@ -14,7 +14,7 @@
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-
+        openChildForm(New UpdateProduct)
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
@@ -22,7 +22,7 @@
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-
+        openChildForm(New SearchProduct)
     End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
@@ -48,6 +48,14 @@
         childForm.BringToFront()
         childForm.Show()
         Heading.Text = childForm.Text
+
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        openChildForm(New ViewUsers)
+    End Sub
+
+    Private Sub FormsPannel_Paint(sender As Object, e As PaintEventArgs) Handles FormsPannel.Paint
 
     End Sub
 End Class

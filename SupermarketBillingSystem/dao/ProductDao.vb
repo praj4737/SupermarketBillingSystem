@@ -6,7 +6,7 @@ Public Class ProductDao
         Dim con As MySqlConnection
         Dim cmd As MySqlCommand
         Dim r As Integer
-        Dim q = "insert into products values('" + p.product_id + "','" + p.batch_id + "','" + p.product_name + "','" + p.category + "','" + p.quantity + "','" + p.price + "','" + p.description + "','" + p.manufacturer + "','" + (p.mfg_date).ToString("yyyyMMdd") + "','" + (p.exp_date).ToString("yyyyMMdd") + "');"
+        Dim q = "insert into products values('" + p.product_id + "','" + p.batch_id + "','" + p.product_name + "','" + p.category + "','" + p.quantity + "','" + p.price + "','" + p.manufacturer + "','" + p.description + "','" + (p.mfg_date).ToString("yyyyMMdd") + "','" + (p.exp_date).ToString("yyyyMMdd") + "');"
         con = New DBConnection().getConnection()
         cmd = New MySqlCommand(q, con)
         r = cmd.ExecuteNonQuery
@@ -82,7 +82,28 @@ Public Class ProductDao
         cmd = New MySqlCommand(q, con)
         r = cmd.ExecuteNonQuery
 
-        If r > -1 Then
+        If r > 0 Then
+            Return True
+        End If
+
+        Return False
+    End Function
+
+    Public Function updateProduct(p As Products) As Boolean
+        Dim con As MySqlConnection
+        Dim cmd As MySqlCommand
+        Dim r As Integer
+        Dim q = "update products set batch_id = '" + p.batch_id + "',product_name = '" + p.product_name + "',category = '" + p.category + "',quantity = '" + p.quantity + "',price = '" + p.price + "',manufacturer = '" + p.manufacturer + "',description = '" + p.description + "',mfg_date = '" + p.mfg_date.ToString("yyyyMMdd") + "',exp_date = '" + p.exp_date.ToString("yyyyMMdd") + "' where product_id = '" + p.product_id + "';"
+        con = New DBConnection().getConnection()
+        MessageBox.Show("reached here below con")
+        cmd = New MySqlCommand(q, con)
+        MessageBox.Show("reached here below cmd")
+
+        r = cmd.ExecuteNonQuery
+        MessageBox.Show("reached here below row")
+        MessageBox.Show(r)
+
+        If r > 0 Then
             Return True
         End If
 

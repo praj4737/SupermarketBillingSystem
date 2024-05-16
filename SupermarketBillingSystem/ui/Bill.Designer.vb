@@ -23,8 +23,10 @@ Partial Class Bill
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Panel1 = New Panel()
-        Label8 = New Label()
-        Label7 = New Label()
+        Label10 = New Label()
+        Label9 = New Label()
+        timeLabel = New Label()
+        datelabel = New Label()
         Label6 = New Label()
         Label5 = New Label()
         Label4 = New Label()
@@ -32,8 +34,8 @@ Partial Class Bill
         Label1 = New Label()
         Label2 = New Label()
         Label3 = New Label()
-        Label9 = New Label()
-        Label10 = New Label()
+        customerName = New Label()
+        print = New Button()
         Panel1.SuspendLayout()
         CType(TotalBill, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
@@ -42,34 +44,52 @@ Partial Class Bill
         ' 
         Panel1.Controls.Add(Label10)
         Panel1.Controls.Add(Label9)
-        Panel1.Controls.Add(Label8)
-        Panel1.Controls.Add(Label7)
+        Panel1.Controls.Add(timeLabel)
+        Panel1.Controls.Add(datelabel)
         Panel1.Controls.Add(Label6)
         Panel1.Controls.Add(Label5)
         Panel1.Controls.Add(Label4)
         Panel1.Dock = DockStyle.Top
         Panel1.Location = New Point(0, 0)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(592, 87)
+        Panel1.Size = New Size(595, 87)
         Panel1.TabIndex = 0
         ' 
-        ' Label8
+        ' Label10
         ' 
-        Label8.AutoSize = True
-        Label8.Location = New Point(453, 54)
-        Label8.Name = "Label8"
-        Label8.Size = New Size(53, 20)
-        Label8.TabIndex = 9
-        Label8.Text = "Label8"
+        Label10.AutoSize = True
+        Label10.Location = New Point(193, 48)
+        Label10.Name = "Label10"
+        Label10.Size = New Size(61, 20)
+        Label10.TabIndex = 11
+        Label10.Text = "method"
         ' 
-        ' Label7
+        ' Label9
         ' 
-        Label7.AutoSize = True
-        Label7.Location = New Point(452, 9)
-        Label7.Name = "Label7"
-        Label7.Size = New Size(53, 20)
-        Label7.TabIndex = 8
-        Label7.Text = "Label7"
+        Label9.AutoSize = True
+        Label9.Location = New Point(111, 48)
+        Label9.Name = "Label9"
+        Label9.Size = New Size(87, 20)
+        Label9.TabIndex = 10
+        Label9.Text = "Pay Method"
+        ' 
+        ' timeLabel
+        ' 
+        timeLabel.AutoSize = True
+        timeLabel.Location = New Point(453, 54)
+        timeLabel.Name = "timeLabel"
+        timeLabel.Size = New Size(53, 20)
+        timeLabel.TabIndex = 9
+        timeLabel.Text = "Label8"
+        ' 
+        ' datelabel
+        ' 
+        datelabel.AutoSize = True
+        datelabel.Location = New Point(452, 9)
+        datelabel.Name = "datelabel"
+        datelabel.Size = New Size(53, 20)
+        datelabel.TabIndex = 8
+        datelabel.Text = "Label7"
         ' 
         ' Label6
         ' 
@@ -140,29 +160,35 @@ Partial Class Bill
         Label3.TabIndex = 4
         Label3.Text = "Thank You ! Visit Again"
         ' 
-        ' Label9
+        ' customerName
         ' 
-        Label9.AutoSize = True
-        Label9.Location = New Point(111, 48)
-        Label9.Name = "Label9"
-        Label9.Size = New Size(87, 20)
-        Label9.TabIndex = 10
-        Label9.Text = "Pay Method"
+        customerName.AutoSize = True
+        customerName.Font = New Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point)
+        customerName.Location = New Point(41, 644)
+        customerName.Name = "customerName"
+        customerName.Size = New Size(91, 23)
+        customerName.TabIndex = 9
+        customerName.Text = "MR. name"
         ' 
-        ' Label10
+        ' print
         ' 
-        Label10.AutoSize = True
-        Label10.Location = New Point(193, 48)
-        Label10.Name = "Label10"
-        Label10.Size = New Size(61, 20)
-        Label10.TabIndex = 11
-        Label10.Text = "method"
+        print.BackColor = Color.Navy
+        print.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point)
+        print.ForeColor = Color.White
+        print.Location = New Point(453, 635)
+        print.Name = "print"
+        print.Size = New Size(139, 37)
+        print.TabIndex = 12
+        print.Text = "Print"
+        print.UseVisualStyleBackColor = False
         ' 
         ' Bill
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(592, 676)
+        ClientSize = New Size(595, 676)
+        Controls.Add(print)
+        Controls.Add(customerName)
         Controls.Add(Label3)
         Controls.Add(Label2)
         Controls.Add(Label1)
@@ -178,8 +204,8 @@ Partial Class Bill
     End Sub
 
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents Label8 As Label
-    Friend WithEvents Label7 As Label
+    Friend WithEvents timeLabel As Label
+    Friend WithEvents datelabel As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
@@ -189,4 +215,6 @@ Partial Class Bill
     Friend WithEvents Label3 As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents Label9 As Label
+    Friend WithEvents customerName As Label
+    Friend WithEvents print As Button
 End Class

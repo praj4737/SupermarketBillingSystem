@@ -79,3 +79,6 @@ C:\Pranav raj 4 sem\SupermarketBillingSystem\obj\Debug\net7.0-windows\Supermarke
 C:\Pranav raj 4 sem\SupermarketBillingSystem\obj\Debug\net7.0-windows\SupermarketBillingSystem.genruntimeconfig.cache
 C:\Pranav raj 4 sem\SupermarketBillingSystem\obj\Debug\net7.0-windows\ref\SupermarketBillingSystem.dll
 C:\Pranav raj 4 sem\SupermarketBillingSystem\obj\Debug\net7.0-windows\SupermarketBillingSystem.AddUser.resources
+C:\Pranav raj 4 sem\SupermarketBillingSystem\obj\Debug\net7.0-windows\SupermarketBillingSystem.UpdateProduct.resources
+C:\Pranav raj 4 sem\SupermarketBillingSystem\obj\Debug\net7.0-windows\SupermarketBillingSystem.SearchProduct.resources
+C:\Pranav raj 4 sem\SupermarketBillingSystem\obj\Debug\net7.0-windows\SupermarketBillingSystem.ViewUsers.resources

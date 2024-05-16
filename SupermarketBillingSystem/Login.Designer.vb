@@ -25,6 +25,7 @@ Partial Class Login
         Panel1 = New Panel()
         Panel2 = New Panel()
         PictureBox1 = New PictureBox()
+        message = New Label()
         loginLabel = New Label()
         pass = New Label()
         FileSystemWatcher1 = New IO.FileSystemWatcher()
@@ -32,7 +33,6 @@ Partial Class Login
         password = New TextBox()
         uid = New Label()
         Button1 = New Button()
-        message = New Label()
         Label1 = New Label()
         loginType = New ComboBox()
         Panel1.SuspendLayout()
@@ -67,6 +67,17 @@ Partial Class Login
         PictureBox1.Size = New Size(173, 162)
         PictureBox1.TabIndex = 0
         PictureBox1.TabStop = False
+        ' 
+        ' message
+        ' 
+        message.AutoSize = True
+        message.BackColor = Color.White
+        message.Font = New Font("Times New Roman", 10.2F, FontStyle.Bold, GraphicsUnit.Point)
+        message.Location = New Point(327, 119)
+        message.Name = "message"
+        message.Size = New Size(72, 19)
+        message.TabIndex = 11
+        message.Text = "Message"
         ' 
         ' loginLabel
         ' 
@@ -133,25 +144,15 @@ Partial Class Login
         Button1.Text = "Login"
         Button1.UseVisualStyleBackColor = False
         ' 
-        ' message
-        ' 
-        message.AutoSize = True
-        message.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point)
-        message.Location = New Point(390, 119)
-        message.Name = "message"
-        message.Size = New Size(43, 23)
-        message.TabIndex = 8
-        message.Text = "Msg"
-        ' 
         ' Label1
         ' 
         Label1.AutoSize = True
         Label1.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point)
         Label1.Location = New Point(304, 163)
         Label1.Name = "Label1"
-        Label1.Size = New Size(61, 23)
+        Label1.Size = New Size(85, 23)
         Label1.TabIndex = 9
-        Label1.Text = "UserID"
+        Label1.Text = "User Type"
         ' 
         ' loginType
         ' 
@@ -168,9 +169,9 @@ Partial Class Login
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
         ClientSize = New Size(717, 432)
+        Controls.Add(message)
         Controls.Add(loginType)
         Controls.Add(Label1)
-        Controls.Add(message)
         Controls.Add(Button1)
         Controls.Add(uid)
         Controls.Add(password)
@@ -178,6 +179,7 @@ Partial Class Login
         Controls.Add(pass)
         Controls.Add(loginLabel)
         Controls.Add(Panel1)
+        ForeColor = Color.Black
         MaximizeBox = False
         Name = "Login"
         StartPosition = FormStartPosition.CenterScreen
@@ -200,8 +202,8 @@ Partial Class Login
     Friend WithEvents uid As Label
     Friend WithEvents password As TextBox
     Friend WithEvents userId As TextBox
-    Friend WithEvents message As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents loginType As ComboBox
     Friend WithEvents Label1 As Label
+    Friend WithEvents message As Label
 End Class

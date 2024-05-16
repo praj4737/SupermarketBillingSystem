@@ -109,4 +109,14 @@ Public Class DeleteProduct
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
 
     End Sub
+
+    Private Sub DeleteProduct_Load_1(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim con As MySqlConnection
+        Dim ad As MySqlDataAdapter
+        Dim table As New DataTable
+        con = New DBConnection().getConnection()
+        table = New ProductDao().viewProducts()
+        ' ad.Fill(table)
+        productsViewTable.DataSource = table
+    End Sub
 End Class

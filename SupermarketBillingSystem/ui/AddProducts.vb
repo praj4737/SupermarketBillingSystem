@@ -21,8 +21,8 @@ Public Class AddProducts
         Dim cmd As MySqlCommand
         Dim dr As MySqlDataReader
 
-        Dim q = "select category from categorys;"
-        Dim q1 = "select manufacturer_name from manufacturer;"
+        Dim q = "select category from products;"
+        Dim q1 = "select manufacturer from products;"
         con = New DBConnection().getConnection()
 
         cmd = New MySqlCommand(q, con)
@@ -34,7 +34,7 @@ Public Class AddProducts
         cmd = New MySqlCommand(q1, con)
         dr = cmd.ExecuteReader
         While (dr.Read)
-            manufacturer.Items.Add(dr("manufacturer_name"))
+            manufacturer.Items.Add(dr("manufacturer"))
         End While
 
 
@@ -98,13 +98,23 @@ Public Class AddProducts
         newRow(1) = "P" + CStr(pid)
         pid += 1
         newRow(2) = TextBox3.Text
-        newRow(3) = category.SelectedItem
-        newRow(4) = manufacturer.SelectedItem
+        If category.SelectedItem = "" Then
+            newRow(3) = category.Text
+        Else
+            newRow(3) = category.SelectedItem
+        End If
+
+
+        If manufacturer.SelectedItem = "" Then
+            newRow(4) = manufacturer.Text
+        Else
+            newRow(4) = manufacturer.SelectedItem
+        End If
 
         newRow(8) = TextBox6.Text
 
         newRow(5) = (DateTimePicker1.Value)
-        newRow(6) = (DateTimePicker1.Value)
+        newRow(6) = (DateTimePicker2.Value)
         newRow(7) = TextBox5.Text
         newRow(9) = TextBox1.Text
 
@@ -123,7 +133,7 @@ Public Class AddProducts
         p.quantity = ProductsGrid.Rows(serial).Cells(7).Value
         p.price = ProductsGrid.Rows(serial).Cells(8).Value
 
-        ' p.batch_id = ProductsGrid.Rows(serial).Cells(9).Value
+        p.batch_id = ProductsGrid.Rows(serial).Cells(9).Value
         Dim dao As New ProductDao()
         Dim res = dao.addProductsDao(p)
         If res = True Then

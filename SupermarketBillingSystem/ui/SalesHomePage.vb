@@ -30,4 +30,8 @@ Public Class SalesHomePage
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
 
     End Sub
+
+    Private Sub FormsPannel_Paint(sender As Object, e As PaintEventArgs) Handles FormsPannel.Paint
+
+    End Sub
 End Class

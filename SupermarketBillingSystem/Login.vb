@@ -14,33 +14,35 @@ Public Class Login
         Dim user = userId.Text
         Dim pass = password.Text
         If loginType.SelectedIndex > 0 Then
-
-            If userId.Text.Length > 0 And password.Text.Length > 0 Then
-                If New AdminLoginController().adminLoginController(user, pass) = True Then
-                    If loginType.SelectedIndex = 1 Then
-                        GlobalConstants.userId = user
-                        AdminHomePageV2.Visible = True
-
-                    End If
-                    If loginType.SelectedIndex = 2 Then
-                        GlobalConstants.userId = user
-                        PointOfSale.Visible = True
-
-                    End If
-                    Me.Visible = False
+            If loginType.SelectedIndex = 1 Then
+                If user = "" Or pass = "" Then
+                    showMessage("pls enter user name or password", Color.Orange, Color.White)
                 Else
-                    showMessage("Wrong User ID and Pass", Color.Red, Color.White)
-
+                    If New LoginDao().adminLoginDao(user, pass) Then
+                        AdminHomePageV2.Visible = True
+                        Me.Visible = False
+                    Else
+                        showMessage("wrong username or password", Color.Red, Color.White)
+                    End If
                 End If
-            Else
-                showMessage("Please Enter UID and Password", Color.Orange, Color.White)
-                MessageBox.Show("Please Enter UID and Password")
+            ElseIf loginType.SelectedIndex = 2 Then
+                If user = "" Or pass = "" Then
+                    showMessage("pls enter user name or password", Color.Orange, Color.White)
+                Else
+                    If New LoginDao().salesLogin(user, pass) Then
+                        SalesHomePage.Visible = True
+                        Me.Visible = False
+                    Else
+                        showMessage("wrong username or password", Color.Red, Color.White)
+                    End If
+                End If
             End If
 
         Else
-            showMessage("Please Select a login type", Color.Red, Color.White)
-            MessageBox.Show("Please Select Login Type")
+            showMessage("pls select User type first", Color.Orange, Color.White)
         End If
+
+
     End Sub
     Private Sub showMessage(msg As String, backColor As Color, foreColor As Color)
         message.Text = msg
