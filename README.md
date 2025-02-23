@@ -11,7 +11,7 @@
   - [2. Set Up the Database](#2-set-up-the-database)
   - [3. Configure the Connection](#3-configure-the-connection)
   - [4. Run the Application](#4-run-the-application)
-- [License](#license)
+
 
 ---
 
@@ -76,6 +76,4 @@ cd retail-billing-system
 2. Run the application (`F5`).
 3. Log in with default credentials (if provided in the database dump) or create a new account.
 
-## License
 
-This project is licensed under the MIT License. Feel free to modify and distribute it as needed.
