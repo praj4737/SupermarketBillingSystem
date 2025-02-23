@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ui\AddProducts.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ui\AddUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ui\AddUsers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ui\AdminHomePageV2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ui\DeleteProduct.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ui\Bill.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ui\SearchProduct.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ui\SearchProducts.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ui\PointOfSale.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ui\ProductAddedFailedPage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ui\ProductAddedSucessPage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ui\SalesHomePage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ui\UpdateProduct.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ui\viewProducts.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ui\ViewProductStock.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ui\ViewSales.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ui\ViewUsers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
